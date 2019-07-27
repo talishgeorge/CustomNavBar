@@ -52,13 +52,17 @@ class CNavBar: UIView {
         //fixInView(self)
     }
     
+    func setBGColor() {
+        self.outerContentView.backgroundColor = UIColor.init(hexString: "00bfff")
+    }
+    
     func setupSafeAreaGuide(guide: UILayoutGuide) {
         if #available(iOS 11, *) {
-            //self.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+            self.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
             self.trailingAnchor.constraint(equalTo: guide.trailingAnchor).isActive = true
             self.leadingAnchor.constraint(equalTo: guide.leadingAnchor).isActive = true
             if hasTopNotch == false {
-                self.heightAnchor.constraint(equalToConstant: 44).isActive = true
+                self.heightAnchor.constraint(equalToConstant: 64).isActive = true
             }
         } else {
             let standardSpacing: CGFloat = 0.0
@@ -79,8 +83,8 @@ class CNavBar: UIView {
     
     class func getScreen() -> CNavBar {
         let xib = Bundle.main.loadNibNamed(String(describing :self), owner: self, options: nil)
-        let me = xib![0] as! CNavBar
-        return me
+        let navBar = xib![0] as! CNavBar
+        return navBar
     }
     
     @IBAction func userTappedRightButton(_ sender: Any) {
@@ -112,27 +116,6 @@ class CNavBar: UIView {
 
 extension UIView
 {
-    func fixInView(_ container: UIView!) -> Void{
-        self.translatesAutoresizingMaskIntoConstraints = false;
-        //self.frame = container.frame;
-        //container.addSubview(self);
-        NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal, toItem: container, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
-        NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal, toItem: container, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
-        NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1.0, constant: 0).isActive = true
-        NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
-        
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        self.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        
-        if #available(iOS 11, *) {
-            self.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor).isActive = true
-        } else {
-            self.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        }
-        
-    }
-    
     func getNavBarheight() -> Float {
         return Float(self.frame.size.height)
     }

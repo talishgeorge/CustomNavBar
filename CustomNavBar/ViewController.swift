@@ -19,9 +19,10 @@ class ViewController: UIViewController {
         self.view.addSubview(custNavBar)
         let safeGuide = self.view.safeAreaLayoutGuide
         custNavBar.setupSafeAreaGuide(guide: safeGuide)
+        custNavBar.setBGColor()
         //let loadingBar: LoadingView = LoadingView()
         //loadingBar.startAnimating()
-        custNavBar.startProgress()
+        //custNavBar.startProgress()
     }
 }
 
