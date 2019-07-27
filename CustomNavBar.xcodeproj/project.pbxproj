@@ -16,9 +16,13 @@
 		83DE06A822EAB0F000CA6D1A /* CNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83DE06A722EAB0F000CA6D1A /* CNavBar.xib */; };
 		83DE06AA22EB027E00CA6D1A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE06A922EB027E00CA6D1A /* LoadingView.swift */; };
 		83F8751422EB4BC200502A56 /* UIColor+HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8751322EB4BC200502A56 /* UIColor+HexColor.swift */; };
+		CAC8160B72DE8F014FBB84CC /* Pods_CustomNavBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7595723D2EC7BD2913F915 /* Pods_CustomNavBar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38D3E5274F26A9CE69E4ADEE /* Pods-CustomNavBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomNavBar.debug.xcconfig"; path = "Target Support Files/Pods-CustomNavBar/Pods-CustomNavBar.debug.xcconfig"; sourceTree = "<group>"; };
+		3E57A0B100B54044324DD97C /* Pods-CustomNavBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomNavBar.release.xcconfig"; path = "Target Support Files/Pods-CustomNavBar/Pods-CustomNavBar.release.xcconfig"; sourceTree = "<group>"; };
+		7F7595723D2EC7BD2913F915 /* Pods_CustomNavBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomNavBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DE069022EAA90B00CA6D1A /* CustomNavBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomNavBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DE069322EAA90B00CA6D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83DE069522EAA90B00CA6D1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC8160B72DE8F014FBB84CC /* Pods_CustomNavBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76CDD4EFA67266480B69E302 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F7595723D2EC7BD2913F915 /* Pods_CustomNavBar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		83DE068722EAA90B00CA6D1A = {
 			isa = PBXGroup;
 			children = (
 				83DE069222EAA90B00CA6D1A /* CustomNavBar */,
 				83DE069122EAA90B00CA6D1A /* Products */,
+				D7A392C2F21416957F6D11F6 /* Pods */,
+				76CDD4EFA67266480B69E302 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +91,16 @@
 			path = CustomNavBar;
 			sourceTree = "<group>";
 		};
+		D7A392C2F21416957F6D11F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38D3E5274F26A9CE69E4ADEE /* Pods-CustomNavBar.debug.xcconfig */,
+				3E57A0B100B54044324DD97C /* Pods-CustomNavBar.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83DE06A222EAA90C00CA6D1A /* Build configuration list for PBXNativeTarget "CustomNavBar" */;
 			buildPhases = (
+				EA40D6890BE5B8BDCDA7407B /* [CP] Check Pods Manifest.lock */,
 				83DE068C22EAA90B00CA6D1A /* Sources */,
 				83DE068D22EAA90B00CA6D1A /* Frameworks */,
 				83DE068E22EAA90B00CA6D1A /* Resources */,
+				C2092880EE20B9896FA2F4E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +169,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C2092880EE20B9896FA2F4E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomNavBar/Pods-CustomNavBar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomNavBar/Pods-CustomNavBar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomNavBar/Pods-CustomNavBar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA40D6890BE5B8BDCDA7407B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomNavBar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		83DE068C22EAA90B00CA6D1A /* Sources */ = {
@@ -296,6 +365,7 @@
 		};
 		83DE06A322EAA90C00CA6D1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38D3E5274F26A9CE69E4ADEE /* Pods-CustomNavBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -313,6 +383,7 @@
 		};
 		83DE06A422EAA90C00CA6D1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E57A0B100B54044324DD97C /* Pods-CustomNavBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
