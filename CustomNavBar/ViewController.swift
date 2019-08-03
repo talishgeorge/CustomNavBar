@@ -14,18 +14,8 @@ class ViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         custCollectionView.delegate = self
         custCollectionView.dataSource = self
-        
-        let imageView : UIImageView = {
-            let iv = UIImageView()
-            iv.image = UIImage(named:"cellbgimage")
-            iv.contentMode = .scaleAspectFill
-            return iv
-        }()
-        
-        self.custCollectionView.backgroundView = imageView
     }
 }
 
@@ -43,22 +33,19 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
         return cell
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 300)
-    }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         custNavBar.startProgress()
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y
         if (offset < -44) {
-            //print("Scroll Offset =>", scrollView.contentOffset)
-            //offset = offset/150
-            print("Scroll Offset =>", abs(offset))
+            //print("Scroll Offset =>", abs(offset))
             custNavBar.setTransparency(alpha: Float(offset))
+            self.custCollectionView?.alpha = 0.7
         } else {
             custNavBar.setBGColorWithAlpha(alpha: 1.0)
+            self.custCollectionView?.alpha = 1.0
         }
     }
 }
