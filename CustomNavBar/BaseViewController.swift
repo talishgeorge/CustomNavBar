@@ -19,15 +19,23 @@ class BaseViewController: UIViewController {
             let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
             self.navBar.navigationController()?.pushViewController(secondViewController, animated: true)
         }
+        
+        navBar.onRightButtonAction = { success in
+            let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+            self.navBar.navigationController()?.pushViewController(secondViewController, animated: true)
+        }
+        
         navBar.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(navBar)
         let safeGuide = self.view.safeAreaLayoutGuide
         navBar.setupSafeAreaGuide(guide: safeGuide)
-        NavBarConstants.barBackgroundColor = NavBarConstants.barBackgroundColor
+        NavBarConstants.barBGColor = UIColor.init(hexString: "#0074b1", alpha: 1.0)
+        NavBarConstants.transparentBGColor = UIColor.black.withAlphaComponent(0.5)
         NavBarConstants.leftNavButtonImage = UIImage(named: "back-navigation")!
         NavBarConstants.rightNavButtonImage = UIImage(named: "menu")!
-        NavBarConstants.titleColor = UIColor.init(hexString: "#2E3033", alpha: 1.0)//UIColor.init(hexString: "#F3F3F3", alpha: 1.0)
-        NavBarConstants.titleFont = UIFont.boldSystemFont(ofSize: 36)
+        NavBarConstants.titleColor = UIColor.init(hexString: "#F3F3F3", alpha: 1.0)
+        NavBarConstants.transparentTitleColor = UIColor.init(hexString: "#F3F3F3", alpha: 1.0)
+        NavBarConstants.titleFont = UIFont.boldSystemFont(ofSize: 26)
         navBar.configureNavBar()
     }
 }

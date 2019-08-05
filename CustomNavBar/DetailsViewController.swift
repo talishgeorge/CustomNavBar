@@ -7,11 +7,12 @@
 //
 
 import UIKit
-
+import CNavBarLib
 class DetailsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NavBarConstants.leftNavButtonImage = UIImage(named: "back-navigation")!
         navBar.onLeftButtonAction = { success in
         self.navBar.navigationController()?.popViewController(animated: true)
         }

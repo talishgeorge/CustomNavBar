@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CNavBarLib
 
 class ViewController: BaseViewController {
     
@@ -16,6 +17,8 @@ class ViewController: BaseViewController {
         super.viewDidLoad()
         custCollectionView.delegate = self
         custCollectionView.dataSource = self
+        NavBarConstants.leftNavButtonImage = UIImage()
+        navBar.configureNavBar()
     }
 }
 
@@ -42,7 +45,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         if (offset < -44) {
             //print("Scroll Offset =>", abs(offset))
             navBar.setTransparency(alpha: Float(offset))
-            self.custCollectionView?.alpha = 0.7
+            self.custCollectionView?.alpha = 0.5
         } else {
             navBar.setBGColorWithAlpha(alpha: 1.0)
             self.custCollectionView?.alpha = 1.0
