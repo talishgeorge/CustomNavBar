@@ -11,24 +11,24 @@ import CNavBarLib
 
 class BaseViewController: UIViewController {
     
-    public var custNavBar = CNavBar()
+    public var navBar = CustomNavigationController.loadNavBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        custNavBar = custNavBar.setupView()
-        custNavBar.onLeftButtonAction = { success in
+        navBar.onLeftButtonAction = { success in
             let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
-            self.custNavBar.navigationController()?.pushViewController(secondViewController, animated: true)
+            self.navBar.navigationController()?.pushViewController(secondViewController, animated: true)
         }
-        
-        custNavBar.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(custNavBar)
-        
+        navBar.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(navBar)
         let safeGuide = self.view.safeAreaLayoutGuide
-        custNavBar.setupSafeAreaGuide(guide: safeGuide)
-        custNavBar.setBGColor()
-        custNavBar.hidePrgressBar()
+        navBar.setupSafeAreaGuide(guide: safeGuide)
+        NavBarConstants.barBackgroundColor = NavBarConstants.barBackgroundColor
+        NavBarConstants.leftNavButtonImage = UIImage(named: "back-navigation")!
+        NavBarConstants.rightNavButtonImage = UIImage(named: "menu")!
+        NavBarConstants.titleColor = UIColor.init(hexString: "#2E3033", alpha: 1.0)//UIColor.init(hexString: "#F3F3F3", alpha: 1.0)
+        NavBarConstants.titleFont = UIFont.boldSystemFont(ofSize: 36)
+        navBar.configureNavBar()
     }
 }
 

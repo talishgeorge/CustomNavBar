@@ -35,16 +35,16 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        custNavBar.startProgress()
+        navBar.startProgress()
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y
         if (offset < -44) {
             //print("Scroll Offset =>", abs(offset))
-            custNavBar.setTransparency(alpha: Float(offset))
+            navBar.setTransparency(alpha: Float(offset))
             self.custCollectionView?.alpha = 0.7
         } else {
-            custNavBar.setBGColorWithAlpha(alpha: 1.0)
+            navBar.setBGColorWithAlpha(alpha: 1.0)
             self.custCollectionView?.alpha = 1.0
         }
     }

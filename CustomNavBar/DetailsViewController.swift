@@ -12,8 +12,8 @@ class DetailsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        custNavBar.onLeftButtonAction = { success in
-            self.custNavBar.navigationController()?.popViewController(animated: true)
+        navBar.onLeftButtonAction = { success in
+        self.navBar.navigationController()?.popViewController(animated: true)
         }
     }
     
