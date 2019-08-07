@@ -17,12 +17,15 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         navBar.onLeftButtonAction = { success in
             let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
-            self.navBar.navigationController()?.pushViewController(secondViewController, animated: true)
+            //self.navBar.navigationController()?.pushViewController(secondViewController, animated: true)
+            self.navBar.hidePrgressBar()
         }
         
         navBar.onRightButtonAction = { success in
             let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
-            self.navBar.navigationController()?.pushViewController(secondViewController, animated: true)
+           self.navBar.navigationController()?.pushViewController(secondViewController, animated: true)
+            //self.navBar.startProgress()
+            //self.navBar.stratHorizontalProgressbar()
         }
         
         navBar.translatesAutoresizingMaskIntoConstraints = false
@@ -37,6 +40,10 @@ class BaseViewController: UIViewController {
         NavBarConstants.transparentTitleColor = UIColor.init(hexString: "#F3F3F3", alpha: 1.0)
         NavBarConstants.titleFont = UIFont.boldSystemFont(ofSize: 26)
         navBar.configureNavBar()
+       
+        navBar.heightForLinearBar = 4
+        navBar.backgroundProgressBarColor = UIColor.black
+        navBar.progressBarColor = UIColor.white
     }
 }
 

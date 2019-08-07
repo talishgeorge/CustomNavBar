@@ -10,11 +10,11 @@
 		</data>
 		<key>CNavBar.nib</key>
 		<data>
-		CLoJ+LxhOW3KA1lX7NcMtc3Afrs=
+		OCeR9fKvcWcqolbAOeoksZ8VETQ=
 		</data>
 		<key>Headers/CNavBarLib-Swift.h</key>
 		<data>
-		s1m1jrgEA8uAt8mLHmy5P9iDeXk=
+		bWkSMgaP9wGY2KB4mPucEejtR7Y=
 		</data>
 		<key>Headers/CNavBarLib.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/CNavBarLib.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		AkXorGskse2Fs6lgBaf8ynHakko=
+		7vlqEJlahLgEOx5OtXnemgsygic=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -54,14 +54,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			++kiTKdDZHcWorqQWHXV5qvNF+DJqnXQLTXHp4N1xIk=
+			ljcx+IGPggUrmTds2tGlUZI29gFO1RJBrVp7dNH6eTg=
 			</data>
 		</dict>
 		<key>Headers/CNavBarLib-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9ucM42m+0532qJ1QVzUad2NOlscKgmBUSYnpwhOLbqw=
+			OyWYf/QmuTZdtIKrGdoVSY4q6870Q3SfHVknpXydJVg=
 			</data>
 		</dict>
 		<key>Headers/CNavBarLib.h</key>
@@ -89,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TGvt4co7ohJNTBftYrIacQYrGA5KaHrGKHI0tJQ24ks=
+			xfz62KCt86jZwk3eIA6CftKNgeoO3Br+kp0PjZRj0eo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
