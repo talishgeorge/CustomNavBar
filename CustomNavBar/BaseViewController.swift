@@ -40,7 +40,6 @@ class BaseViewController: UIViewController {
         NavBarConstants.transparentTitleColor = UIColor.init(hexString: "#F3F3F3", alpha: 1.0)
         NavBarConstants.titleFont = UIFont.boldSystemFont(ofSize: 26)
         navBar.configureNavBar()
-       
         navBar.heightForLinearBar = 4
         navBar.backgroundProgressBarColor = UIColor.black
         navBar.progressBarColor = UIColor.white
