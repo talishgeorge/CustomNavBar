@@ -10,7 +10,8 @@
 		8304253422F3DECA0011803A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304253322F3DECA0011803A /* BaseViewController.swift */; };
 		8334197022F3E0AC001648F9 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8334196F22F3E0AC001648F9 /* CustomCell.swift */; };
 		8334197522F3E230001648F9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8334197422F3E230001648F9 /* DetailsViewController.swift */; };
-		833C530924A34CE7005A2DCC /* OakLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833C530724A34B48005A2DCC /* OakLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		833C530B24A34F30005A2DCC /* OakLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833C530A24A34F30005A2DCC /* OakLib.framework */; };
+		833C530C24A34F4F005A2DCC /* OakLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833C530A24A34F30005A2DCC /* OakLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		83DE069422EAA90B00CA6D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE069322EAA90B00CA6D1A /* AppDelegate.swift */; };
 		83DE069622EAA90B00CA6D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE069522EAA90B00CA6D1A /* ViewController.swift */; };
 		83DE069922EAA90B00CA6D1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DE069722EAA90B00CA6D1A /* Main.storyboard */; };
@@ -25,7 +26,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				833C530924A34CE7005A2DCC /* OakLib.framework in Embed Frameworks */,
+				833C530C24A34F4F005A2DCC /* OakLib.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,7 +40,7 @@
 		8304253322F3DECA0011803A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8334196F22F3E0AC001648F9 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		8334197422F3E230001648F9 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		833C530724A34B48005A2DCC /* OakLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OakLib.framework; path = "../Library/Developer/Xcode/DerivedData/CNavBarLib-fdjgdwsdlkkcroaolwwohwxrwdyn/Build/Products/Debug-iphonesimulator/OakLib.framework"; sourceTree = "<group>"; };
+		833C530A24A34F30005A2DCC /* OakLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OakLib.framework; path = "../Library/Developer/Xcode/DerivedData/CNavBarLib-fdjgdwsdlkkcroaolwwohwxrwdyn/Build/Products/Debug-iphonesimulator/OakLib.framework"; sourceTree = "<group>"; };
 		83DE069022EAA90B00CA6D1A /* CustomNavBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomNavBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DE069322EAA90B00CA6D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83DE069522EAA90B00CA6D1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				833C530B24A34F30005A2DCC /* OakLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +73,7 @@
 		83DE068722EAA90B00CA6D1A = {
 			isa = PBXGroup;
 			children = (
-				833C530724A34B48005A2DCC /* OakLib.framework */,
+				833C530A24A34F30005A2DCC /* OakLib.framework */,
 				83DE069222EAA90B00CA6D1A /* CustomNavBar */,
 				83DE069122EAA90B00CA6D1A /* Products */,
 				D7A392C2F21416957F6D11F6 /* Pods */,
