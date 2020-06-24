@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import CNavBarLib
+import OakLib
+
 class DetailsViewController: BaseViewController {
     
     override func viewDidLoad() {

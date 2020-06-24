@@ -7,18 +7,18 @@
 //
 
 import UIKit
-import CNavBarLib
+import OakLib
 
 class BaseViewController: UIViewController {
     
-    public var navBar = CustomNavigationController.loadNavBar()
+    public var navBar = CustomNavigationView.loadNavigationBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navBar.onLeftButtonAction = { success in
             let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
             //self.navBar.navigationController()?.pushViewController(secondViewController, animated: true)
-            self.navBar.hidePrgressBar()
+            self.navBar.hideProgressBar()
         }
         
         navBar.onRightButtonAction = { success in
@@ -31,7 +31,7 @@ class BaseViewController: UIViewController {
         navBar.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(navBar)
         let safeGuide = self.view.safeAreaLayoutGuide
-        navBar.setupSafeAreaGuide(guide: safeGuide)
+        navBar.setupSafeArea(guide: safeGuide)
         NavBarConstants.barBGColor = UIColor.init(hexString: "#0074b1", alpha: 1.0)
         NavBarConstants.transparentBGColor = UIColor.black.withAlphaComponent(0.5)
         NavBarConstants.leftNavButtonImage = UIImage(named: "back-navigation")!
@@ -39,10 +39,10 @@ class BaseViewController: UIViewController {
         NavBarConstants.titleColor = UIColor.init(hexString: "#F3F3F3", alpha: 1.0)
         NavBarConstants.transparentTitleColor = UIColor.init(hexString: "#F3F3F3", alpha: 1.0)
         NavBarConstants.titleFont = UIFont.boldSystemFont(ofSize: 26)
-        navBar.configureNavBar()
-        navBar.heightForLinearBar = 4
-        navBar.backgroundProgressBarColor = UIColor.black
-        navBar.progressBarColor = UIColor.white
+        navBar.configureNavigationBar()
+        //navBar.heightForLinearBar = 4
+        //navBar.backgroundProgressBarColor = UIColor.black
+        //navBar.progressBarColor = UIColor.white
     }
 }
 

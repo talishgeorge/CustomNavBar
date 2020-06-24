@@ -8,7 +8,7 @@
 //
 
 import UIKit
-import CNavBarLib
+import OakLib
 
 class ViewController: BaseViewController {
     
@@ -19,11 +19,13 @@ class ViewController: BaseViewController {
         custCollectionView.delegate = self
         custCollectionView.dataSource = self
         NavBarConstants.leftNavButtonImage = UIImage()
-        navBar.configureNavBar()
+        navBar.configureNavigationBar()
     }
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ViewController: UICollectionViewDelegate,
+    UICollectionViewDataSource,
+UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -37,10 +39,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
         return cell
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        navBar.stratHorizontalProgressbar()
+        navBar.startHorizontalProgressbar()
     }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y
         if (offset < -44) {
@@ -48,7 +51,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
             navBar.setTransparency(alpha: Float(offset))
             self.custCollectionView?.alpha = 0.5
         } else {
-            navBar.setBGColorWithAlpha(alpha: 1.0)
+            //navBar.setBGColorWithAlpha(alpha: 1.0)
             self.custCollectionView?.alpha = 1.0
         }
     }

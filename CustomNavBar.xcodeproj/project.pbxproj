@@ -9,15 +9,13 @@
 /* Begin PBXBuildFile section */
 		8304253422F3DECA0011803A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304253322F3DECA0011803A /* BaseViewController.swift */; };
 		8334197022F3E0AC001648F9 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8334196F22F3E0AC001648F9 /* CustomCell.swift */; };
-		8334197122F3E10B001648F9 /* CNavBarLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8304252222EC7C0F0011803A /* CNavBarLib.framework */; };
-		8334197222F3E10B001648F9 /* CNavBarLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8304252222EC7C0F0011803A /* CNavBarLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8334197522F3E230001648F9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8334197422F3E230001648F9 /* DetailsViewController.swift */; };
+		833C530924A34CE7005A2DCC /* OakLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 833C530724A34B48005A2DCC /* OakLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		83DE069422EAA90B00CA6D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE069322EAA90B00CA6D1A /* AppDelegate.swift */; };
 		83DE069622EAA90B00CA6D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE069522EAA90B00CA6D1A /* ViewController.swift */; };
 		83DE069922EAA90B00CA6D1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DE069722EAA90B00CA6D1A /* Main.storyboard */; };
 		83DE069B22EAA90C00CA6D1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83DE069A22EAA90C00CA6D1A /* Assets.xcassets */; };
 		83DE069E22EAA90C00CA6D1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83DE069C22EAA90C00CA6D1A /* LaunchScreen.storyboard */; };
-		CAC8160B72DE8F014FBB84CC /* Pods_CustomNavBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7595723D2EC7BD2913F915 /* Pods_CustomNavBar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,7 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8334197222F3E10B001648F9 /* CNavBarLib.framework in Embed Frameworks */,
+				833C530924A34CE7005A2DCC /* OakLib.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,10 +36,10 @@
 		38D3E5274F26A9CE69E4ADEE /* Pods-CustomNavBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomNavBar.debug.xcconfig"; path = "Target Support Files/Pods-CustomNavBar/Pods-CustomNavBar.debug.xcconfig"; sourceTree = "<group>"; };
 		3E57A0B100B54044324DD97C /* Pods-CustomNavBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomNavBar.release.xcconfig"; path = "Target Support Files/Pods-CustomNavBar/Pods-CustomNavBar.release.xcconfig"; sourceTree = "<group>"; };
 		7F7595723D2EC7BD2913F915 /* Pods_CustomNavBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomNavBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8304252222EC7C0F0011803A /* CNavBarLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CNavBarLib.framework; sourceTree = "<group>"; };
 		8304253322F3DECA0011803A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8334196F22F3E0AC001648F9 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		8334197422F3E230001648F9 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		833C530724A34B48005A2DCC /* OakLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OakLib.framework; path = "../Library/Developer/Xcode/DerivedData/CNavBarLib-fdjgdwsdlkkcroaolwwohwxrwdyn/Build/Products/Debug-iphonesimulator/OakLib.framework"; sourceTree = "<group>"; };
 		83DE069022EAA90B00CA6D1A /* CustomNavBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomNavBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DE069322EAA90B00CA6D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83DE069522EAA90B00CA6D1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,8 +54,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8334197122F3E10B001648F9 /* CNavBarLib.framework in Frameworks */,
-				CAC8160B72DE8F014FBB84CC /* Pods_CustomNavBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +71,7 @@
 		83DE068722EAA90B00CA6D1A = {
 			isa = PBXGroup;
 			children = (
-				8304252222EC7C0F0011803A /* CNavBarLib.framework */,
+				833C530724A34B48005A2DCC /* OakLib.framework */,
 				83DE069222EAA90B00CA6D1A /* CustomNavBar */,
 				83DE069122EAA90B00CA6D1A /* Products */,
 				D7A392C2F21416957F6D11F6 /* Pods */,
